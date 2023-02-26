@@ -15,7 +15,7 @@ class User():
 
     __password = None
 
-    def _init_(self):
+    def __init__(self):
         """
         Initialize a new user:
         - assigned an unique `id`
@@ -57,7 +57,7 @@ class User():
         return hashlib.md5(pwd.encode()).hexdigest().lower() == self.password
 
 
-if _name_ == '_main_':
+if __name__ == '__main__':
     print("Test User")
 
     user_1 = User()
